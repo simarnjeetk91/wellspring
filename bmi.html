@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Calculate your Body Mass Index (BMI) quickly and see your category." />
+  <title>BMI Calculator · WellSpring Family Clinic</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="WellSpring logo" width="160" height="40" /></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a aria-current="page" href="bmi.html">BMI Calculator</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1 class="page-title reveal">BMI Calculator</h1>
+    <p class="lead reveal">Enter your height and weight to estimate your BMI.</p>
+
+    <form id="bmi-form" class="form card reveal" novalidate>
+      <fieldset>
+        <legend>Units</legend>
+        <label><input type="radio" name="unit" value="cm" checked> cm / kg</label>
+        <label><input type="radio" name="unit" value="m"> m / kg</label>
+      </fieldset>
+
+      <div class="field">
+        <label for="height">Height <span aria-live="polite" id="height-unit">(cm)</span></label>
+        <input id="height" name="height" type="number" inputmode="decimal" min="0" step="0.1" required aria-describedby="height-help" />
+        <small id="height-help">Enter your height in the unit selected above.</small>
+      </div>
+
+      <div class="field">
+        <label for="weight">Weight (kg)</label>
+        <input id="weight" name="weight" type="number" inputmode="decimal" min="0" step="0.1" required />
+      </div>
+
+      <button class="btn" type="submit">Calculate BMI</button>
+      <button class="btn btn-outline" type="reset">Clear</button>
+    </form>
+
+    <output id="bmi-result" class="result reveal" aria-live="polite"></output>
+
+    <section class="info reveal">
+      <h2>How it’s calculated</h2>
+      <p><code>BMI = weight (kg) / height (m)<sup>2</sup></code></p>
+      <ul class="legend">
+        <li><span class="chip chip-under">Underweight</span> BMI &lt; 18.5</li>
+        <li><span class="chip chip-normal">Normal</span> 18.5–24.9</li>
+        <li><span class="chip chip-over">Overweight</span> 25–29.9</li>
+        <li><span class="chip chip-obese">Obese</span> 30+</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="assets/js/bmi.js" defer></script>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container legal">
+      <p>&copy; <span id="year"></span> WellSpring Family Clinic</p>
+    </div>
+    <script src="assets/js/main.js" defer></script>
+  </footer>
+</body>
+</html>

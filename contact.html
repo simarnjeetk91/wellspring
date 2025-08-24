@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact WellSpring Family Clinic: phone, email, address and map." />
+  <title>Contact · WellSpring Family Clinic</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="WellSpring logo" width="160" height="40" /></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a aria-current="page" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1 class="page-title reveal">Contact Us</h1>
+
+    <div class="grid-2">
+      <section class="card reveal">
+        <h2>Get in touch</h2>
+        <p><strong>Phone:</strong> <a href="tel:+61123456789">+61 123 456 789</a><br />
+           <strong>Email:</strong> <a href="mailto:www.wellspring@clinic.com.au">www.wellspring@clinic.com.au</a><br />
+           <strong>Address:</strong> 123 Health St, Melbourne VIC</p>
+
+        <form id="contact-form" class="form" novalidate>
+          <div class="field"><label for="cname">Name</label><input id="cname" name="name" required /></div>
+          <div class="field"><label for="cemail">Email</label><input id="cemail" name="email" type="email" required /></div>
+          <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" name="message" rows="4" required></textarea></div>
+          <button class="btn" type="submit">Send Message</button>
+          <p class="help">Configured for EmailJS; see README to enable live email sending.</p>
+        </form>
+      </section>
+
+      <section class="card reveal">
+        <h2>Find us</h2>
+        <div class="map-wrap" role="img" aria-label="Map showing the clinic location in Melbourne">
+          <iframe title="Map of WellSpring Family Clinic" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+           src="https://maps.google.com/maps?q=Melbourne%20VIC&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="assets/js/main.js" defer></script>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container legal">
+      <p>&copy; <span id="year"></span> WellSpring Family Clinic</p>
+    </div>
+  </footer>
+</body>
+</html>

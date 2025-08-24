@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Request an appointment at WellSpring Family Clinic." />
+  <title>Appointment Request · WellSpring Family Clinic</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="WellSpring logo" width="160" height="40" /></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a aria-current="page" href="appointment.html">Appointment</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <h1 class="page-title reveal">Appointment Request</h1>
+    <p class="lead reveal">Fill in your details and preferred time. We’ll confirm via phone or email.</p>
+
+    <form id="appt-form" class="form card reveal" novalidate>
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" />
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" pattern="\+?[0-9\-\s]{7,}" />
+      </div>
+
+      <div class="field">
+        <label for="date">Preferred Date</label>
+        <input id="date" name="date" type="date" required />
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Reason for visit, preferred time, doctor (optional)"></textarea>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Send Request</button>
+        <p class="help">This form is configured for EmailJS. See README to enable email sending.</p>
+      </div>
+    </form>
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container legal">
+      <p>&copy; <span id="year"></span> WellSpring Family Clinic</p>
+    </div>
+  </footer>
+</body>
+</html>
